@@ -23,29 +23,7 @@
 
 Every farming season, someone has to answer a hard question: **what should be planted next?** Rainfall is less predictable, summers are hotter, and a crop that rebuilds the soil in one place can drain water or invite disease in another. The data to answer this exists. NASA has been watching the planet for decades. But it is scattered across many sources, in different formats and resolutions, and hard to turn into a decision.
 
-**FieldShift Orbit brings it together.** It fuses six NASA datasets with soil and crop information, tests every sensible three-season rotation against normal, dry, wet and hot years, and then does the part we care about most: it **explains its answers**.
-
-## ✨ See it in action
-
-Under default priorities on our pilot farm, the app compared the common "maize every season" habit with the best option it found:
-
-| | Existing: Maize → Maize → Maize | Top pick: Cowpea → Finger millet → Cowpea |
-|---|---|---|
-| Score (normal year) | 50 / 100 | **81 / 100** |
-| Score (dry year) | 38 / 100 | **76 / 100** |
-| Soil nitrogen balance over 3 seasons | −102 kg/ha | **+16 kg/ha** |
-| Rank among 357 feasible rotations | #349 | **#1** |
-
-Change the sliders and every ranking updates instantly.
-
-## 🧩 What's inside
-
-- 🛰️ **Digital farm twin:** location, soil estimates, terrain (slope and drainage) and a calendar showing when fields tend to be bare.
-- 📈 **Climate observatory:** 25 years of NASA data (2001–2025, 9,131 daily records). Toggle layers, sweep through the year, and cross-check rainfall from three independent sources.
-- 🧪 **Strategy lab:** 357 feasible rotations × 4 climate scenarios = **1,428 simulations**, running live in your browser.
-- 🎚️ **Your priorities, your results:** five priority sliders (climate fit, water resilience, soil health, rotation health, farmer utility), food-vs-market balance, residue handling, and rainfall and temperature what-if sliders.
-- 💡 **Explains itself:** every strategy has *Why / Evidence / Benefits / Gaps & risks* tabs, plus plain-language explanations of ET₀, NDVI, soil moisture and dry spells.
-- 🔎 **Honest by design:** every figure is tagged *observed*, *modelled*, *derived* or *assumed*, and an engine confidence meter (currently 55%, Medium) shows what would raise it.
+**FieldShift Orbit brings it together.** It fuses six NASA datasets with soil and crop information and tests every sensible three-season rotation against normal, dry, wet and hot years (357 rotations × 4 scenarios = 1,428 simulations on our pilot farm, using 25 years of data). Then it does the part we care about most: it **explains its answers**. Every strategy shows why it was suggested, the evidence behind it, its benefits, and the risks and information gaps that still need local review.
 
 ## 👥 Who it helps
 
@@ -55,23 +33,8 @@ Agricultural extension officers and advisors, agronomists, researchers, developm
 
 ```mermaid
 flowchart LR
-    A["🛰️ NASA data<br/>POWER · GPM IMERG · SMAP<br/>MODIS · Landsat · NASADEM"] --> C
-    B["🌐 Partner data<br/>ERA5 · SoilGrids · FAO-56"] --> C
-    C["🐍 Python pipeline<br/>clean · harmonise · season statistics"] --> D
-    D["📦 Data pack (JSON)<br/>climate · soil · terrain · evidence"] --> E
-    E["⚙️ Rotation engine<br/>357 rotations × 4 scenarios"] --> F
-    F["🖥️ Interactive dashboard<br/>Canvas · SVG · live what-if"]
+    A["🛰️ NASA and partner data"] --> B["⚙️ Rotation engine"] --> C["💡 Clear, explained choices"]
 ```
-
-## 🎯 Skills this project demonstrates
-
-| Area | What we built |
-|---|---|
-| **Data engineering** | Harmonised six NASA datasets and three partner sources with resolutions from 30 m to 69 km |
-| **Algorithms** | A scoring engine with hard-rule filtering, multi-scenario evaluation and weighted multi-objective ranking |
-| **Full-stack** | Python and FastAPI pipeline, with the engine ported to JavaScript so it runs offline in the browser |
-| **Data visualisation** | Animated 3D globe, linked climate timeline, radar charts and scenario comparisons using Canvas and SVG |
-| **Product thinking** | Explainable results, uncertainty labels and confidence scoring so users know what to trust |
 
 ## 📡 Data sources
 
@@ -81,16 +44,33 @@ flowchart LR
 
 ## 📍 Pilot site
 
-A 2 ha rain-fed farm in Soroti, Teso, Uganda (1.71°N, 33.61°E). The engine works for any location, and we're extending it to Karnataka, India (31 districts).
+A 2 ha rain-fed farm in Soroti, Teso, Uganda (1.71°N, 33.61°E).
+The engine works for any location.
 
 ## ⚠️ Limitations
 
-- Crop traits such as water need and nitrogen values are assumed pending agronomist review, and soil comes from a global model rather than a lab test.
-- Scores are a relative index for comparing options, not yield or profit forecasts.
-- Right now the app is demonstrated on one pilot farm and is English-only. The three rainfall sources disagree by up to 27% and no local rain gauge is attached, so results should be checked on the ground before they guide real decisions.
+- Right now the app is demonstrated on one pilot farm.
+- It is currently available in English only.
+- Results should be checked on the ground before they guide real decisions.
 
 *FieldShift Orbit supports expert judgment; it doesn't replace it.*
 
+## 🚀 Future scope
+
+- Extend the engine to Karnataka, India, covering all 31 districts.
+- Add local rain-gauge readings and lab soil tests to validate the satellite data.
+- Integrate more Earth observation data, such as ECOSTRESS, GRACE and Sentinel-2.
+- Add local-language support and delivery by SMS or mobile for field advisors.
+
 ---
 
-<sub>Created for the NASA Space Apps Challenge. Not affiliated with or endorsed by NASA. No NASA logos or branding are used. Built with AI assistance (Claude), disclosed as the challenge requires.</sub>
+## 📝 About this project
+
+Created for the **NASA Space Apps Challenge**. 
+This project is **not affiliated with or endorsed by NASA**
+**no NASA logos or branding are used**.
+
+<p align="center">
+    
+"thankyou.svg" alt="Thank you for visiting"
+</p>
