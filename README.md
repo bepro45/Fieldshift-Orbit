@@ -70,7 +70,7 @@ Created for the **NASA Space Apps Challenge**.
 This project is **not affiliated with or endorsed by NASA**
 **no NASA logos or branding are used**.
 
-<p align="center">
+<div align="center">
     
 Thank you for visiting
-</p>
+</div>
