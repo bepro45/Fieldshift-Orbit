@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FieldShift Orbit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<style>/*CSS*/</style></head><body>
+<div id="prog"></div><div id="glow"></div><div id="tip"></div>
+<nav><div class="brand hud"><i class="dot"></i>FieldShift <span style="color:var(--cy)">Orbit</span></div>
+<div class="links"><a href="#hero">Mission</a><a href="#twin">Farm twin</a><a href="#obs">Observatory</a><a href="#lab">Strategy lab</a><a href="#science">Decode</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></div></nav>
+<main>
+<section id="hero">
+ <div><span class="chip hud">NASA Space Apps 2026 · Field Shift</span>
+ <h1>Rotate smarter.<br><span>Read the planet.</span></h1>
+ <p class="lead">A decision-support twin that fuses NASA satellite records with soil and crop traits to compare three-season crop-rotation strategies — explained, uncertainty-aware, and built to support farmer judgment, not replace it.</p>
+ <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap"><a class="cta" href="#lab">Launch strategy lab →</a><a class="cta ghost" href="#obs">Explore the data</a></div>
+ <div class="stats" id="stats"></div></div>
+ <div id="globeWrap"><canvas id="globe"></canvas></div>
+</section>
+<div class="ticker"><div id="ticker"></div></div>
+<section id="twin"><div class="eyebrow hud reveal">01 · Digital farm twin</div><h2 class="reveal">One farm, <em>seen from orbit</em> and from the soil.</h2>
+<p class="lead reveal" id="twinLead"></p><div class="grid g3" style="margin-top:34px" id="twinGrid"></div>
+<div class="grid g2" style="margin-top:18px"><div class="panel reveal corner"><h3>Resolution ladder <small>why datasets must be harmonised</small></h3><div class="ladder" id="ladder"></div><p class="legend" style="margin-top:6px">Footprints drawn to log scale around the farm point. Coarse grids average the farm with its surroundings.</p></div>
+<div class="panel reveal corner"><h3>Field cover calendar <small>Landsat 30 m · when fields tend to be bare</small></h3><div class="cov" id="cov"></div><div class="legend" style="margin-top:14px"><span>MODIS 250 m below — smoother, blends neighbouring land</span></div><div class="cov" id="cov2" style="margin-top:6px"></div><div class="legend"><span>◼ greener = higher NDVI</span><span style="color:var(--cy)">▢ outlined = growing-season window (assumed)</span></div><p class="lead" id="covNote" style="font-size:.86rem"></p></div></div></section>
+<section id="obs"><div class="eyebrow hud reveal">02 · Climate observatory</div><h2 class="reveal">25 years of <em>NASA signals</em>, one timeline.</h2>
+<p class="lead reveal">Toggle layers and scrub the calendar. Each line is scaled to its own range so patterns line up; exact values appear in the readout.</p>
+<div class="panel reveal corner" style="margin-top:30px"><div class="layers" id="layers"></div><svg id="clim" viewBox="0 0 960 330" style="width:100%;height:auto"></svg>
+<div style="display:flex;gap:10px;align-items:center;margin-top:6px"><button class="lyr on" id="play" style="--c:var(--lime)"><i></i>▶ Sweep the year</button><span class="legend" style="margin:0" id="monthLbl"></span></div><div class="readout" id="readout"></div></div>
+<div class="grid g2" style="margin-top:18px"><div class="panel reveal corner"><h3>Year-to-year rainfall <small>NASA POWER · hover</small></h3><svg id="yrs" viewBox="0 0 560 250" style="width:100%"></svg><p class="legend" id="yrNote"></p></div>
+<div class="panel reveal corner"><h3>Satellite vs reanalysis <small>season rainfall, mean of 25 yrs</small></h3><svg id="xchk" viewBox="0 0 560 250" style="width:100%"></svg><p class="legend" id="xNote"></p></div></div></section>
+<section id="lab"><div class="eyebrow hud reveal">03 · Strategy lab</div><h2 class="reveal">Tell it your priorities. <em>Watch strategies re-rank.</em></h2>
+<p class="lead reveal">Every feasible three-season rotation is scored in four climate scenarios by the Farm Twin engine, right in your browser. Compare your existing rotation with the engine's alternatives.</p>
+<div id="lab2" style="display:grid;grid-template-columns:340px 1fr;gap:18px;margin-top:34px;align-items:start">
+<aside class="panel" id="ctrl"></aside><div id="labOut"></div></div></section>
+<section id="science"><div class="eyebrow hud reveal">04 · Decode the science</div><h2 class="reveal">Plain-language <em>terms</em>. Tap a card.</h2><div class="grid g3 gloss" style="margin-top:30px" id="gloss"></div></section>
+<section id="evidence"><div class="eyebrow hud reveal">05 · Evidence & provenance</div><h2 class="reveal">Every number has a <em>source and a label</em>.</h2>
+<div class="legend reveal" style="margin:16px 0"><span><span class="tag obs">observed</span> NASA/partner measurement summary</span><span><span class="tag mod">modelled</span> reanalysis / soil model</span><span><span class="tag der">derived</span> computed by the engine</span><span><span class="tag asm">assumed</span> needs expert review</span></div>
+<div class="panel reveal"><table id="srcT"></table></div><div class="grid g2" style="margin-top:18px"><div class="panel reveal"><h3>Not yet integrated</h3><p style="font-size:.84rem;color:#c3d4ea">The challenge lists more datasets than this prototype ingests. <b>Not used here:</b> ECOSTRESS, GRACE/GRACE-FO, GEDI, Sentinel-2, NLDAS/GLDAS, OpenET, and US-only soil/crop layers (SSURGO, CDL, PRISM, NASS) — the pilot site is in Uganda. Soil comes from SoilGrids instead of Web Soil Survey. Adding a source is one new module in the backend.</p></div>
+<div class="panel reveal"><h3>Objectives coverage</h3><ul class="chk" style="padding:0"><li>3+ strategies compared incl. your existing rotation</li><li>Why suggested · evidence · benefits · gaps · risks on every card</li><li>Farmer priorities, food-vs-market and residue inputs</li><li>Rainfall &amp; temperature what-if sliders, four climate scenarios</li><li>Bare-field periods, terrain, soil uncertainty, resolution ladder</li><li>Explains ET₀, NDVI, soil moisture, dry spells, satellite vs ground</li></ul></div></div></section>
+<section id="limits"><div class="eyebrow hud reveal">06 · Limits &amp; human judgment</div><h2 class="reveal">A <em>supportive</em> tool — not a verdict.</h2>
+<div class="banner reveal" style="margin-top:26px"><b>Support, not replace.</b><span>Scores rank options under stated assumptions; they are not yield or profit forecasts. Farmers, extension officers and agronomists should review every suggestion before acting.</span></div>
+<div class="grid g2" style="margin-top:18px"><div class="panel reveal" id="conf"></div><div class="panel reveal" id="human"></div></div></section>
+</main>
+<footer>FieldShift Orbit · pilot data: Soroti, Teso, Uganda (1.71°N, 33.61°E) · engine v<span id="ev"></span> · built on the ARAPAI Farm Twin backend and NASA open data.</footer>
+<script>/*JS*/</script></body></html>
