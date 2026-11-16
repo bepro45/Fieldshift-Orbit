@@ -72,5 +72,5 @@ This project is **not affiliated with or endorsed by NASA**
 
 <p align="center">
     
-"thankyou.svg" alt="Thank you for visiting"
+Thank you for visiting
 </p>
