@@ -36,7 +36,13 @@ Agricultural extension officers and advisors, agronomists, researchers, developm
 flowchart LR
     A["🛰️ NASA and partner data"] --> B["⚙️ Rotation engine"] --> C["💡 Clear, explained choices"]
 ```
+## ▶️ How to run
 
+- **Online:** open the live website: https://courageous-gaufre-840dff.netlify.app/#twin
+- **On your computer:** download the repository as a ZIP, unzip it, and double-click `index.html`. No installation needed.
+- It works offline, because the rotation engine and the data snapshot are bundled inside the page.
+
+  
 ## 📡 Data sources
 
 **NASA:** [POWER](https://power.larc.nasa.gov/) · [GPM IMERG](https://gpm.nasa.gov/data/imerg) · [SMAP](https://smap.jpl.nasa.gov/) · [MODIS](https://modis.gsfc.nasa.gov/) · [Landsat 8/9](https://landsat.gsfc.nasa.gov/) · [NASADEM](https://lpdaac.usgs.gov/products/nasadem_hgtv001/)
