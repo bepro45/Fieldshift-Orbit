@@ -4,7 +4,7 @@
 ### Turning NASA satellite data into smarter crop-rotation decisions
 
 *Built for the **NASA International Space Apps Challenge 2026** hackathon 
-· Challenge: **Field Shift***
+- · Challenge: **Field Shift***
 
 **[▶ Open the live website](https://courageous-gaufre-840dff.netlify.app/#twin)**
 
