@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛰️ FieldShift Orbit
+#  FieldShift Orbit
 ### Turning NASA satellite data into smarter crop-rotation decisions
 
 *Built for the **NASA International Space Apps Challenge 2026** hackathon 
@@ -20,30 +20,30 @@
 
 ---
 
-## 🌍 The problem we set out to solve
+##  The problem we set out to solve
 
 Every farming season, someone has to answer a hard question: **what should be planted next?** Rainfall is less predictable, summers are hotter, and a crop that rebuilds the soil in one place can drain water or invite disease in another. The data to answer this exists. NASA has been watching the planet for decades. But it is scattered across many sources, in different formats and resolutions, and hard to turn into a decision.
 
 **FieldShift Orbit brings it together.** It fuses six NASA datasets with soil and crop information and tests every sensible three-season rotation against normal, dry, wet and hot years (357 rotations × 4 scenarios = 1,428 simulations on our pilot farm, using 25 years of data). Then it does the part we care about most: it **explains its answers**. Every strategy shows why it was suggested, the evidence behind it, its benefits, and the risks and information gaps that still need local review.
 
-## 👥 Who it helps
+##  Who it helps
 
 Agricultural extension officers and advisors, agronomists, researchers, development agencies and agri-planning teams. It gives them clear options and evidence to discuss with the communities they support, in minutes rather than weeks.
 
-## 🛠️ How it works
+##  How it works
 
 ```mermaid
 flowchart LR
     A["🛰️ NASA and partner data"] --> B["⚙️ Rotation engine"] --> C["💡 Clear, explained choices"]
 ```
-## ▶️ How to run
+##  How to run
 
 - **Online:** open the live website: https://courageous-gaufre-840dff.netlify.app/#twin
 - **On your computer:** download the repository as a ZIP, unzip it, and double-click `index.html`. No installation needed.
 - It works offline, because the rotation engine and the data snapshot are bundled inside the page.
 
   
-## 📡 Data sources
+##  Data sources(Worked with datasets and resources provided by NASA)
 
 **NASA:** [POWER](https://power.larc.nasa.gov/) · [GPM IMERG](https://gpm.nasa.gov/data/imerg) · [SMAP](https://smap.jpl.nasa.gov/) · [MODIS](https://modis.gsfc.nasa.gov/) · [Landsat 8/9](https://landsat.gsfc.nasa.gov/) · [NASADEM](https://lpdaac.usgs.gov/products/nasadem_hgtv001/)
 
@@ -79,5 +79,5 @@ The engine works for any location.
 
 <div align="center">
     
-Thank you for visiting
+Thank you for visiting.
 </div>
