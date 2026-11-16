@@ -49,12 +49,12 @@ flowchart LR
 
 **Partners and open data:** [ERA5 (ECMWF)](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) via [Open-Meteo](https://open-meteo.com/) · [SoilGrids (ISRIC)](https://soilgrids.org/) · [FAO-56](https://www.fao.org/4/x0490e/x0490e00.htm) · [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/)
 
-## 📍 Pilot site
+##  Pilot site
 
 A 2 ha rain-fed farm in Soroti, Teso, Uganda (1.71°N, 33.61°E).
 The engine works for any location.
 
-## ⚠️ Limitations
+##  Limitations
 
 - Right now the app is demonstrated on one pilot farm.
 - It is currently available in English only.
@@ -62,7 +62,7 @@ The engine works for any location.
 
 *FieldShift Orbit supports expert judgment; it doesn't replace it.*
 
-## 🚀 Future scope
+##  Future scope
 
 - Extend the engine to Karnataka, India, covering all 31 districts.
 - Add local rain-gauge readings and lab soil tests to validate the satellite data.
@@ -71,7 +71,7 @@ The engine works for any location.
 
 ---
 
-## 📝 About this project
+##  About this project
 
 - Created for the **NASA Space Apps Challenge**. 
 - This project is **not affiliated with or endorsed by NASA**
