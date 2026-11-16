@@ -3,7 +3,8 @@
 # 🛰️ FieldShift Orbit
 ### Turning NASA satellite data into smarter crop-rotation decisions
 
-*Built for the **NASA International Space Apps Challenge 2026** hackathon · Challenge: **Field Shift***
+*Built for the **NASA International Space Apps Challenge 2026** hackathon 
+· Challenge: **Field Shift***
 
 **[▶ Open the live website](https://courageous-gaufre-840dff.netlify.app/#twin)**
 
@@ -66,9 +67,9 @@ The engine works for any location.
 
 ## 📝 About this project
 
-Created for the **NASA Space Apps Challenge**. 
-This project is **not affiliated with or endorsed by NASA**
-**no NASA logos or branding are used**.
+- Created for the **NASA Space Apps Challenge**. 
+- This project is **not affiliated with or endorsed by NASA**
+- **no NASA logos or branding are used**.
 
 <div align="center">
     
